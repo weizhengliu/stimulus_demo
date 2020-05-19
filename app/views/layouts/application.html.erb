@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stimulus</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+  <body>
+    <div class="flex bg-F2CC8F">
+      <%= link_to 'print', '/print', class: 'm-2' %>
+      <%= link_to 'bind', '/bind', class: 'm-2' %>
+      <%= link_to 'clipboard', '/clipboard', class: 'm-2' %>
+      <%= link_to 'toggle', '/toggle', class: 'm-2' %>
+      <%= link_to 'list', '/list', class: 'm-2' %>
+    </div>
+    <div class="m-16">
+      <%= yield %>
+    </div>
+  </body>
+</html>

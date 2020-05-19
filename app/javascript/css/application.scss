@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  background-color: #F4F1DE;
+}
+input {
+  color: #3D405B;
+}
+* {
+  color: #3D405B;
+  border-color: #3D405B;
+}
+.bg-F2CC8F {
+  background-color: #F2CC8F;
+  color: #3D405B;
+}
+.bg-81B29A {
+  background-color: #81B29A;
+  color: #3D405B;
+}
+.bg-E07A5F {
+  background-color: #E07A5F;
+  color: white;
+}
+

@@ -1,0 +1,22 @@
+<h1 class="text-4xl">迴避 turbolinks 問題</h1>
+<div class="flex">
+  <div class="bg-grey-500 w-1/2 border rounded m-2">
+    <h3>綁定事件在物件</h3>
+    <button type="button" id="trigger" class="bg-E07A5F rounded">按鈕</button>
+    <div id="target" class="flex flex-col"></div>
+    <script>
+      document.addEventListener("turbolinks:load", () => {
+        document.querySelector("#trigger").addEventListener("click", () => {
+          document.querySelector("#target").innerHTML += "<div>bang ⭐️</div>"
+        })
+      });
+    </script>
+  </div>
+
+  <div data-controller="bind" class="bg-grey-300 w-1/2 border rounded m-2">
+    <h3>我大Stimulus</h3>
+    <button data-action="click->bind#bang" type="button" class="bg-E07A5F rounded">按鈕</button>
+    <div data-target="bind.output" class="flex flex-col"></div>
+  </div>
+
+</div>
